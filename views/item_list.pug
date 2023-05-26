@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each item in items_list
+      li
+        a(href=item.url) #{item.name}
+        p #{item.price} $
+        p #{item.description}
+
+    else
+      li There are no categories.
