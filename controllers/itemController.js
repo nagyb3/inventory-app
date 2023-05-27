@@ -16,9 +16,10 @@ exports.item_list = asyncHandler(async (req, res, next) => {
 })
 
 exports.item_detail = asyncHandler(async (req, res, next) => {
-    const item = await Item.findbyId(req.params.id).exec();
+    const item = await Item.findById(req.params.id).exec();
     
-    console.log('asd')
+
+    // console.log('asd')
 
     if (item === null) {
       // No results.
